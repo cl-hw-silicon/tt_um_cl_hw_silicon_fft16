@@ -1,0 +1,65 @@
+# Tiny Tapeout project information
+project:
+  title:        "16-point streaming FFT with OFDM symbol timing"   
+  author:       "cl-hw-silicon"
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "16-point real FFT of an 8-bit ADC stream with on-chip OFDM cyclic-prefix timing; 8-bit I/Q per bin on a 32 MHz source-synchronous bus"
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     32000000  # f_clk = f_s = 32 MHz (one ADC sample per clock)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_cl_hw_silicon_fft16"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_cl_hw_silicon_fft16.v"
+    - "cp_timing.v"
+    - "clk_gate.v"
+    - "fft_core.v"
+    - "sdf_stage.v"
+    - "twiddle_w32.v"
+    - "twiddle_w16.v"
+    - "twiddle_w8.v"
+    - "iq_tail.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+# Pin functions: docs/info.md, Pinout.
+pinout:
+  # Inputs
+  ui[0]: "ADC_D0"
+  ui[1]: "ADC_D1"
+  ui[2]: "ADC_D2"
+  ui[3]: "ADC_D3"
+  ui[4]: "ADC_D4"
+  ui[5]: "ADC_D5"
+  ui[6]: "ADC_D6"
+  ui[7]: "ADC_D7"
+
+  # Outputs
+  uo[0]: "IO0"
+  uo[1]: "IO1"
+  uo[2]: "IO2"
+  uo[3]: "IO3"
+  uo[4]: "IO4"
+  uo[5]: "IO5"
+  uo[6]: "IO6"
+  uo[7]: "IO7"
+
+  # Bidirectional pins
+  uio[0]: "SCLK"
+  uio[1]: "SOF"
+  uio[2]: "VALID"
+  uio[3]: "ADC_CLK"
+  uio[4]: "LOCK"
+  uio[5]: "CFG_EDGE"
+  uio[6]: ""          # unused: the CP length is fixed at 4
+  uio[7]: "DBG"
+
+# Do not change!
+yaml_version: 6

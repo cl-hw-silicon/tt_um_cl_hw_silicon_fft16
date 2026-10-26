@@ -1,0 +1,51 @@
+[
+ {
+  "option": "baseline_src",
+  "area": 16650.9696,
+  "flops": 176,
+  "slack_ss": 15.05,
+  "slack_tt": 23.35
+ },
+ {
+  "option": "baseline_gen",
+  "area": 16650.9696,
+  "flops": 176,
+  "slack_ss": 15.05,
+  "slack_tt": 23.35
+ },
+ {
+  "option": "b",
+  "area": 16537.1104,
+  "flops": 176,
+  "slack_ss": 15.09,
+  "slack_tt": 23.34
+ },
+ {
+  "option": "c9",
+  "area": 19986.6688,
+  "flops": 198,
+  "slack_ss": 13.36,
+  "slack_tt": 22.52
+ },
+ {
+  "option": "c10",
+  "area": 23991.76,
+  "flops": 220,
+  "slack_ss": 13.19,
+  "slack_tt": 22.31
+ },
+ {
+  "option": "b+c9",
+  "area": 20203.1264,
+  "flops": 198,
+  "slack_ss": 12.68,
+  "slack_tt": 22.19
+ },
+ {
+  "option": "b+c10",
+  "area": 22785.6032,
+  "flops": 220,
+  "slack_ss": 12.04,
+  "slack_tt": 21.82
+ }
+]

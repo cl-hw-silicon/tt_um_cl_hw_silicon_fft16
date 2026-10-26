@@ -1,0 +1,6 @@
+pytest==8.4.2
+cocotb==2.1.0
+# The tests use the bit-exact models in ../model (numpy) and the OFDM BER theory (scipy.special.erfc).
+# Newest releases with Python 3.11 wheels, the version TT's test / gl_test GitHub actions set up.
+numpy==2.4.6
+scipy==1.17.1

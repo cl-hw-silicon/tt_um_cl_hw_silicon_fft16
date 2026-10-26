@@ -1,0 +1,19 @@
+[
+ {
+  "unlock_runs": 20,
+  "unlock_sym_min": 74.0,
+  "unlock_sym_max": 130.0,
+  "unlock_sym_med": 100.475,
+  "const_codes": "0x00 0x40 0x80 0xA5 0xFF",
+  "const_lock_sym_min": 15.95,
+  "const_lock_sym_max": 15.95,
+  "unlocks@-400ppm": 7,
+  "runs@-400ppm": "3 x 10000 symbols, 20 dB",
+  "unlocks@-300ppm": 0,
+  "runs@-300ppm": "3 x 10000 symbols, 20 dB",
+  "unlocks@+300ppm": 0,
+  "runs@+300ppm": "3 x 10000 symbols, 20 dB",
+  "unlocks@+400ppm": 0,
+  "runs@+400ppm": "3 x 10000 symbols, 20 dB"
+ }
+]

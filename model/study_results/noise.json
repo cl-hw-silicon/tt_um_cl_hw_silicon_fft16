@@ -1,0 +1,170 @@
+[
+ {
+  "cp": 8,
+  "K": 4,
+  "lock_frac": 0.5,
+  "locks": 86,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 4,
+  "lock_frac": 0.625,
+  "locks": 4,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 4,
+  "lock_frac": 0.75,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 4,
+  "lock_frac": 0.875,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 8,
+  "lock_frac": 0.5,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 8,
+  "lock_frac": 0.625,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 8,
+  "lock_frac": 0.75,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 8,
+  "lock_frac": 0.875,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 16,
+  "lock_frac": 0.5,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 16,
+  "lock_frac": 0.625,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 16,
+  "lock_frac": 0.75,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 8,
+  "K": 16,
+  "lock_frac": 0.875,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 4,
+  "lock_frac": 0.5,
+  "locks": 711,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 4,
+  "lock_frac": 0.625,
+  "locks": 226,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 4,
+  "lock_frac": 0.75,
+  "locks": 49,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 4,
+  "lock_frac": 0.875,
+  "locks": 9,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 8,
+  "lock_frac": 0.5,
+  "locks": 42,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 8,
+  "lock_frac": 0.625,
+  "locks": 2,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 8,
+  "lock_frac": 0.75,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 8,
+  "lock_frac": 0.875,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 16,
+  "lock_frac": 0.5,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 16,
+  "lock_frac": 0.625,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 16,
+  "lock_frac": 0.75,
+  "locks": 0,
+  "samples": 3600000
+ },
+ {
+  "cp": 4,
+  "K": 16,
+  "lock_frac": 0.875,
+  "locks": 0,
+  "samples": 3600000
+ }
+]
