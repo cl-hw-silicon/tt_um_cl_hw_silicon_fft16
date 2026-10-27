@@ -17,6 +17,8 @@ jobs:
         uses: TinyTapeout/tt-gds-action@ttsky26d
         with:
           pdk: sky130A
+          # the LibreLane release the layout was verified with; the default (3.0.14) synthesises it too large to place
+          librelane-version: 3.1.0.dev3
 
   precheck:
     needs: gds
