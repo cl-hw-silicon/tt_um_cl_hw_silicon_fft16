@@ -1,0 +1,25 @@
+# Synthesis cell exclusion list (SYNTH_EXCLUDED_CELL_FILE): open_pdks sky130/librelane/sky130_fd_sc_hd/synth_excluded.cells,
+# verbatim. Pinned so the GitHub action's PDK (which forbids every _1 cell) synthesises like the signed-off PDK.
+# clock buffers/invertes (used in CTS)
+sky130_fd_sc_hd__clkbuf*
+sky130_fd_sc_hd__clkinv*
+sky130_fd_sc_hd__clkinvlp*
+# clock delay buffers (used in PNR timing)
+sky130_fd_sc_hd__clkdlybuf*
+# signal delay buffers (used in PNR timing)
+sky130_fd_sc_hd__dlygate*
+sky130_fd_sc_hd__dlymetal*
+# tap/decap/fill (PNR)
+sky130_fd_sc_hd__tap*
+sky130_fd_sc_hd__decap*
+sky130_fd_sc_hd__fill*
+# diode
+sky130_fd_sc_hd__diode*
+# low power flow (power domain isolation)
+sky130_fd_sc_hd__lpflow_*
+# ECO generic spare cell
+sky130_fd_sc_hd__macro_sparecell
+# probe
+sky130_fd_sc_hd__probe*
+# scan chain cells (used for DFT)
+sky130_fd_sc_hd__s*
