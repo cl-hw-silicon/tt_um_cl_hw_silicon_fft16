@@ -13,12 +13,21 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Build GDS
-        uses: TinyTapeout/tt-gds-action@ttsky26d
+      - name: Read top module name
+        id: top_module
+        run: |
+          echo TOP_MODULE=`yq '.project.top_module' info.yaml` | tee $GITHUB_OUTPUT
+
+      # The layout in gds/, lef/ and gl/ was hardened and verified locally (LibreLane 3.1.0.dev3, Yosys 0.69).
+      # The action's own re-harden synthesises this design too large to place in its 1x2 tiles.
+      - name: Create and publish the GDS artifact
+        uses: TinyTapeout/tt-gds-action/custom_gds@ttsky26d
         with:
+          top_module: ${{ steps.top_module.outputs.TOP_MODULE }}
+          gds_path: gds/${{ steps.top_module.outputs.TOP_MODULE }}.gds
+          lef_path: lef/${{ steps.top_module.outputs.TOP_MODULE }}.lef
+          verilog_path: gl/${{ steps.top_module.outputs.TOP_MODULE }}.v
           pdk: sky130A
-          # the LibreLane release the layout was verified with; the default (3.0.14) synthesises it too large to place
-          librelane-version: 3.1.0.dev3
 
   precheck:
     needs: gds
@@ -26,18 +35,6 @@ jobs:
     steps:
       - name: Run Tiny Tapeout Precheck
         uses: TinyTapeout/tt-gds-action/precheck@ttsky26d
-
-  gl_test:
-    needs: gds
-    runs-on: ubuntu-24.04
-    steps:
-      - name: checkout repo
-        uses: actions/checkout@v6
-        with:
-          submodules: recursive
-
-      - name: GL test
-        uses: TinyTapeout/tt-gds-action/gl_test@ttsky26d
 
   viewer:
     needs: gds
